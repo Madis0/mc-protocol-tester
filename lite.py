@@ -1,11 +1,11 @@
-from mcstatus import MinecraftServer
+from mcstatus import JavaServer
 
 # Version numbers can be spoofed by server so it is better to check for protocol numbers instead
 # 1.8.x is 47, others can be seen at https://wiki.vg/Protocol_version_numbers
 startingProtocol = 47
 
 serverIp = input("Enter version IP: ")
-serverObject = MinecraftServer.lookup(serverIp).status()
+serverObject = JavaServer.lookup(serverIp).status()
 
 print(serverIp, "uses protocol", serverObject.version.protocol, "which claims to be", serverObject.version.name)
 
