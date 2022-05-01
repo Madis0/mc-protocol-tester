@@ -8,4 +8,4 @@ To use, place a file called `servers.txt` in the same folder with server IPs in 
 
 For an interactive CLI, use `lite.py`.
 
-For an active port finder, use `finder.py`.
+For an active port finder, use (at your own risk!) `finder.py`. 
