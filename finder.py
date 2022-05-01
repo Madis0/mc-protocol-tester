@@ -1,5 +1,5 @@
 # This script requires mcstatus. See https://github.com/Dinnerbone/mcstatus or pip install mcstatus
-from mcstatus import MinecraftServer
+from mcstatus import JavaServer
 
 # Version numbers can be spoofed by server so it is better to check for protocol numbers instead
 # 1.8.x is 47, others can be seen at https://wiki.vg/Protocol_version_numbers
@@ -34,7 +34,7 @@ except IOError:
 # Parse testableServers and place the good ones to goodServers
 for server in testableServers:
     try:
-        serverObject = MinecraftServer.lookup(server)
+        serverObject = JavaServer.lookup(server)
         serverStatus = serverObject.status()
 
         if serverStatus.version.protocol > startingProtocol:
